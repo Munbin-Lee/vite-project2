@@ -18,17 +18,15 @@ const Home = () => {
 
   const deleteTodo = (id: number) => {
     const newTodoList = todoList.filter((todoItem) => todoItem.id !== id);
-    // === !==
-    // 1 != "1"
-    // [1,2,3,4] filter !== 3 => [1,2,4]
+
     setTodoList(newTodoList);
   };
 
   return (
     <>
       <TodoListHead>나만의 todo리스트</TodoListHead>
-      <TodoList todoList={todoList} deleteTodo={deleteTodo} />
       <TodoInput addTodo={addTodo} />
+      <TodoList todoList={todoList} deleteTodo={deleteTodo} />
     </>
   );
 };
